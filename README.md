@@ -1,22 +1,4 @@
 
-## Dataset
-
-Download the tree label dataset: https://zenodo.org/records/15351054    
-Make a 'tree_data' directory and move all the tree data directories into it.    
-tree_data/        
-        0_RGB_FullyLabeled     
-        5_RGB_S_320_pL    
-        12_RGB_ObjDet_640_fL    
-        34_RGB_ObjDet_640_pL    
-        34_RGB_ObjDet_640_pL_b    
-        test    
-
-
-### Data preprocess: image tile    
-0_RGB_FullyLabeled includes high resoultion images, so I made it four tiles when the image shape is over 800x800.    
-0_RGB_FullyLabeled_tile directory would be created in tree_data.    
-reference: tile.ipynb
-
 
 ## Installation
 
@@ -33,9 +15,29 @@ cd /yolov9
 pip install -r requirements.txt
 ```
 
+## Dataset
+
+Download the tree label dataset: https://zenodo.org/records/15351054    
+Make a 'tree_data' directory and move all the tree data directories into it.    
+tree_data/        
+        0_RGB_FullyLabeled     
+        5_RGB_S_320_pL    
+        12_RGB_ObjDet_640_fL    
+        34_RGB_ObjDet_640_pL    
+        34_RGB_ObjDet_640_pL_b    
+        test    
+
+### Data preprocess: image tile    
+0_RGB_FullyLabeled includes high resoultion images, so I made it four tiles when the image shape is over 800x800.    
+0_RGB_FullyLabeled_tile directory would be created in tree_data.    
+reference: tile.ipynb
+
 
 ### Pre trained weight    
 - Download the pretrained weights (last.pt, gelan-e.pt) and moved them into weights directory: https://drive.google.com/drive/folders/1ktPsE8r2vPNhkfIJJbABB_oEgTFcD9YJ?usp=sharing    
+  
+
+
 
 ## Training
 
