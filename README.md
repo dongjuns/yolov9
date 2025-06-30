@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 
 ### Pre trained weight    
-- Download the pretrained weight (last.pt, gelan-e.pt): https://drive.google.com/drive/folders/1ktPsE8r2vPNhkfIJJbABB_oEgTFcD9YJ?usp=sharing    
+- Download the pretrained weights (last.pt, gelan-e.pt) and moved them into weights directory: https://drive.google.com/drive/folders/1ktPsE8r2vPNhkfIJJbABB_oEgTFcD9YJ?usp=sharing    
 
 ## Training
 
@@ -43,7 +43,7 @@ Single GPU training
 
 ``` shell
 # train gelan models
-# python train.py --batch 32 --epochs 300 --img 640 --device 0 --data ./data/tree.yaml --weights ./weights/gelan-e.pt --cfg models/detect/tree.yaml --hyp hyp.scratch-high.yaml --workers 2 --patience 100
+python train.py --batch 32 --epochs 300 --img 640 --device 0 --data ./data/tree.yaml --weights ./weights/gelan-e.pt --cfg models/detect/tree.yaml --hyp hyp.scratch-high.yaml --workers 2 --patience 100
 ```
 
 ## Inference
