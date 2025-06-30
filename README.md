@@ -31,10 +31,17 @@ tree_data/
         test    
 ```
 
+
+
+### Data preprocess: class id    
+(1) The class IDs of the 0_RGB_FullyLabeled dataset were mismatched with other datasets, so they were aligned accordingly.    
+(2) For YOLO model training, all class IDs were decremented by 1. (starts from 0~)     
+
+
 ### Data preprocess: image tile    
 0_RGB_FullyLabeled includes high resoultion images, so I made it four tiles when the image shape is over 800x800.    
 0_RGB_FullyLabeled_tile directory would be created in tree_data.    
-reference: tile.ipynb
+*reference: preprocess.ipynb
 
 <div align="center">
     <a href="./">
@@ -71,6 +78,7 @@ python detect.py --weights ./weights/last.pt --source ./tree_data/test --device 
 
 
 ## Model
+YOLOv9 GELAN is a lightweight, high-performance object detection architecture that efficiently aggregates multi-scale features while enhancing gradient flow through Programmable Gradient Information (PGI).    
 
 <div align="center">
     <a href="./">
@@ -90,11 +98,6 @@ python detect.py --weights ./weights/last.pt --source ./tree_data/test --device 
         <img src="./figure/GELAN.png" width="90%"/>
     </a>
 </div>
-
-## Re-parameterization
-
-See [reparameterization.ipynb](https://github.com/WongKinYiu/yolov9/blob/main/tools/reparameterization.ipynb).
-
 
 
 ## Citation
