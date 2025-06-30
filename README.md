@@ -17,8 +17,11 @@ pip install -r requirements.txt
 
 ## Dataset
 
-Download the tree label dataset: https://zenodo.org/records/15351054    
+Download the tree label dataset: https://zenodo.org/records/15351054        
+
 Make a 'tree_data' directory and move all the tree data directories into it.    
+
+```shell
 tree_data/        
         0_RGB_FullyLabeled     
         5_RGB_S_320_pL    
@@ -26,17 +29,22 @@ tree_data/
         34_RGB_ObjDet_640_pL    
         34_RGB_ObjDet_640_pL_b    
         test    
+```
 
 ### Data preprocess: image tile    
 0_RGB_FullyLabeled includes high resoultion images, so I made it four tiles when the image shape is over 800x800.    
 0_RGB_FullyLabeled_tile directory would be created in tree_data.    
 reference: tile.ipynb
 
+<div align="center">
+    <a href="./">
+        <img src="./figure/tile.png" width="49%"/>
+    </a>
+</div>
+
 
 ### Pre trained weight    
 - Download the pretrained weights (last.pt, gelan-e.pt) and moved them into weights directory: https://drive.google.com/drive/folders/1ktPsE8r2vPNhkfIJJbABB_oEgTFcD9YJ?usp=sharing    
-  
-
 
 
 ## Training
@@ -52,7 +60,7 @@ python train.py --batch 32 --epochs 300 --img 640 --device 0 --data ./data/tree.
 
 <div align="center">
     <a href="./">
-        <img src="./figure/treeai_result.png" width="49%"/>
+        <img src="./figure/treeai_result.png" width="30%"/>
     </a>
 </div>
 
@@ -61,6 +69,27 @@ python train.py --batch 32 --epochs 300 --img 640 --device 0 --data ./data/tree.
 python detect.py --weights ./weights/last.pt --source ./tree_data/test --device 0 --save-txt --save-conf --conf-thres 0.01 --agnostic-nms
 ```
 
+
+## Model
+
+<div align="center">
+    <a href="./">
+        <img src="./figure/yolov9-architecture.png" width="80%"/>
+    </a>
+</div>
+
+<div align="center">
+    <a href="./">
+        <img src="./figure/PGI.png" width="90%"/>
+    </a>
+</div>
+
+
+<div align="center">
+    <a href="./">
+        <img src="./figure/GELAN.png" width="90%"/>
+    </a>
+</div>
 
 ## Re-parameterization
 
