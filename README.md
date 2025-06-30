@@ -50,7 +50,7 @@ Single GPU training
 
 <div align="center">
     <a href="./">
-        <img src="./figure/horses_prediction.jpg" width="49%"/>
+        <img src="./figure/treeai_result.png" width="49%"/>
     </a>
 </div>
 
