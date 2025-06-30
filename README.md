@@ -45,7 +45,25 @@ tree_data/
 
 <div align="center">
     <a href="./">
-        <img src="./figure/tile.png" width="49%"/>
+        <img src="./figure/tile.png" width="100%"/>
+    </a>
+</div>
+
+
+### Idea suggestion: image mask
+Incomplete Labeling Handling: For images with incomplete annotations, apply masks to regions outside the labeled areas.    
+
+Training Phase:    
+No need to apply masking during training.    
+Incomplete labels do not significantly affect the learning process.    
+
+Validation Phase:    
+Apply masking to avoid false positives.    
+Helps ensure evaluation metrics are not skewed by unlabeled but detectable objects.    
+
+<div align="center">
+    <a href="./">
+        <img src="./figure/mask.png" width="100%"/>
     </a>
 </div>
 
