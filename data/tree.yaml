@@ -1,0 +1,89 @@
+path: /root/workspace/TreeAI/yolov9  # dataset root dir
+train: all_tree_train_new.txt  # train images (relative to 'path') 118287 images
+val: all_tree_val_new.txt  # val images (relative to 'path') 5000 images
+
+# Classes
+names:
+  0: betula papyrifera  
+  1: tsuga canadensis  
+  2: picea abies  
+  3: acer saccharum  
+  4: betula sp.  
+  5: pinus sylvestris  
+  6: picea rubens  
+  7: betula alleghaniensis  
+  8: larix decidua  
+  9: fagus grandifolia  
+  10: picea sp.  
+  11: fagus sylvatica  
+  12: dead tree  
+  13: acer pensylvanicum  
+  14: populus balsamifera  
+  15: quercus ilex  
+  16: quercus robur  
+  17: pinus strobus  
+  18: larix laricina  
+  19: larix gmelinii  
+  20: pinus pinea  
+  21: populus grandidentata  
+  22: pinus montezumae  
+  23: abies alba  
+  24: betula pendula  
+  25: pseudotsuga menziesii  
+  26: fraxinus nigra  
+  27: dacrydium cupressinum  
+  28: cedrus libani  
+  29: acer pseudoplatanus  
+  30: pinus elliottii  
+  31: cryptomeria japonica  
+  32: pinus koraiensis  
+  33: abies holophylla  
+  34: alnus glutinosa  
+  35: fraxinus excelsior  
+  36: coniferous  
+  37: eucalyptus globulus  
+  38: pinus nigra  
+  39: quercus rubra  
+  40: tilia europaea  
+  41: abies firma  
+  42: acer sp.  
+  43: metrosideros umbellata  
+  44: acer rubrum  
+  45: picea mariana  
+  46: abies balsamea  
+  47: castanea sativa  
+  48: tilia cordata  
+  49: populus sp.  
+  50: crataegus monogyna  
+  51: quercus petraea  
+  52: acer platanoides  
+  53: robinia pseudoacacia  
+  54: useless
+  55: quercus sp.  
+  56: salix alba  
+  57: pinus sp.  
+  58: carpinus sp.  
+  59: deciduous  
+  60: salix sp.  
+  61: Tilia platyphyllos  
+  62: Tilia spp  
+  63: Ulmus glabra
+
+
+# Download script/URL (optional)
+download: |
+  from utils.general import download, Path
+
+
+  # Download labels
+  #segments = True  # segment or box labels
+  #dir = Path(yaml['path'])  # dataset root dir
+  #url = 'https://github.com/WongKinYiu/yolov7/releases/download/v0.1/'
+  #urls = [url + ('coco2017labels-segments.zip' if segments else 'coco2017labels.zip')]  # labels
+  #download(urls, dir=dir.parent)
+
+  # Download data
+  #urls = ['http://images.cocodataset.org/zips/train2017.zip',  # 19G, 118k images
+  #        'http://images.cocodataset.org/zips/val2017.zip',  # 1G, 5k images
+  #        'http://images.cocodataset.org/zips/test2017.zip']  # 7G, 41k images (optional)
+  #download(urls, dir=dir / 'images', threads=3)
